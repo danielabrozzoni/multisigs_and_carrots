@@ -1,0 +1,29 @@
+[package]
+name = "template"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bdk = { version = "0.22.0", features = ["compiler", "use-esplora-ureq"]}
+
+[[bin]]
+name = "generate_keys"
+path = "src/generate_keys.rs"
+
+[[bin]]
+name = "generate_descriptor"
+path = "src/generate_descriptor.rs"
+
+[[bin]]
+name = "create_psbt"
+path = "src/create_psbt.rs"
+
+[[bin]]
+name = "sign_psbt"
+path = "src/sign_psbt.rs"
+
+[[bin]]
+name = "combine_psbts"
+path = "src/combine_psbts.rs"
